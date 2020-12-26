@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+    <error-page>
+        <error-code>500</error-code>
+        <location>/InputErrorPage.html</location>
+    </error-page>
+
+    <servlet>
+        <servlet-name>actorDetails</servlet-name>
+        <servlet-class>controllers.actor.ActorDetails</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>actorDetails</servlet-name>
+        <url-pattern>/actorDetails</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>filmToActor</servlet-name>
+        <servlet-class>controllers.actor.AddFilmToActor</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>filmToActor</servlet-name>
+        <url-pattern>/filmToActor</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>addActor</servlet-name>
+        <servlet-class>controllers.actor.AddActor</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>addActor</servlet-name>
+        <url-pattern>/addActor</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>addDirector</servlet-name>
+        <servlet-class>controllers.director.AddDirector</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>addDirector</servlet-name>
+        <url-pattern>/addDirector</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>navigateServlet</servlet-name>
+        <servlet-class>controllers.NavigateController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>navigateServlet</servlet-name>
+        <url-pattern>/list</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>addFilmServlet</servlet-name>
+        <servlet-class>controllers.film.AddFilmServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>addFilmServlet</servlet-name>
+        <url-pattern>/addFilm</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>details</servlet-name>
+        <servlet-class>controllers.film.FilmDetailsController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>details</servlet-name>
+        <url-pattern>/details</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>directorDetails</servlet-name>
+        <servlet-class>controllers.director.DirectorDetails</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>directorDetails</servlet-name>
+        <url-pattern>/directorDetails</url-pattern>
+    </servlet-mapping>
+</web-app>
